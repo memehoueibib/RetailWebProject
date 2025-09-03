@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="jumbotron bg-primary text-white rounded p-5 mb-4">
+        <h1 class="display-4 fw-bold">
+            <i class="bi bi-shop"></i> Welcome to Retail Web Store
+        </h1>
+        <p class="lead">Discover amazing products and manage your inventory with ease.</p>
+        <hr class="my-4 border-white">
+        <p>Explore our product catalog or manage customer information.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <a class="btn btn-light btn-lg me-md-2" asp-controller="Products" asp-action="Index" role="button">
+                <i class="bi bi-box"></i> Browse Products
+            </a>
+            <a class="btn btn-outline-light btn-lg" asp-controller="Customers" asp-action="Index" role="button">
+                <i class="bi bi-people"></i> View Customers
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Product Management</h5>
+                    <p class="card-text">Add, edit, and manage your product inventory with full CRUD operations.</p>
+                    <a asp-controller="Products" asp-action="Create" class="btn btn-primary">
+                        <i class="bi bi-plus-circle"></i> Add Product
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-plus display-4 text-success mb-3"></i>
+                    <h5 class="card-title">Customer Management</h5>
+                    <p class="card-text">Manage customer information and maintain your customer database.</p>
+                    <a asp-controller="Customers" asp-action="Create" class="btn btn-success">
+                        <i class="bi bi-plus-circle"></i> Add Customer
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-search display-4 text-info mb-3"></i>
+                    <h5 class="card-title">Search & Filter</h5>
+                    <p class="card-text">Quickly find products by name or category with our advanced search features.</p>
+                    <a asp-controller="Products" asp-action="Index" class="btn btn-info">
+                        <i class="bi bi-search"></i> Search Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
