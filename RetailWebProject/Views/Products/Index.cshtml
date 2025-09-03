@@ -53,7 +53,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">
-                            <strong>Price:</strong> <currency amount="@item.Price"></currency>
+                            <strong>Price:</strong> <span class="price-display">@item.Price.ToString("C")</span>
                         </p>
                         <p class="card-text">
                             <strong>Release Date:</strong> @Html.DisplayFor(modelItem => item.ReleaseDate)

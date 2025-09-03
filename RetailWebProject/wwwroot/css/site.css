@@ -651,3 +651,64 @@
     font-weight: 700;
     color: #2d3748;
   }
+
+
+
+/* Styles de base pour tous les éléments currency */
+.currency-amount {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Styles spécifiques selon le montant (pour votre TagHelper) */
+.currency-amount.text-success {
+  color: #38a169 !important;
+  font-weight: 800 !important;
+}
+
+.currency-amount.text-primary {
+  color: #4299e1 !important;
+  font-weight: 700 !important;
+}
+
+.currency-amount.text-muted {
+  color: #667eea !important;
+  font-weight: 600 !important;
+}
+
+/* Assurer que les prix sont visibles dans les cards */
+.card-body .currency-amount {
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  margin-left: 0.5rem;
+}
+
+/* Style pour les prix dans les détails de produits */
+.card-text strong + .currency-amount {
+  color: #667eea !important;
+  font-weight: 800 !important;
+}
+
+/* Fix pour les background des card-header qui pourraient cacher le texte */
+.card-header.bg-light {
+  background: rgba(248, 249, 250, 0.9) !important;
+  color: #2c3e50 !important;
+}
+
+/* Assurer la lisibilité dans tous les contextes */
+currency,
+span.currency-amount {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Style alternatif si certains prix ne s'affichent toujours pas */
+.price-display {
+  font-weight: 700 !important;
+  color: #667eea !important;
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+}

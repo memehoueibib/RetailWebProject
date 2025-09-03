@@ -22,7 +22,7 @@
 
                     <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Price)</dt>
                     <dd class="col-sm-9">
-                        <currency amount="@Model.Price"></currency>
+                        <span class="price-display">@Model.Price.ToString("C")</span>
                     </dd>
 
                     <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ReleaseDate)</dt>
